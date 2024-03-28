@@ -23,32 +23,44 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="EwI-0S-WcV">
-                                <rect key="frame" x="20" y="0.0" width="374" height="846"/>
+                                <rect key="frame" x="20" y="48" width="374" height="798"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWk-0e-YYH">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSI-li-mhO">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="639.5"/>
+                                        <rect key="frame" x="0.0" y="43.5" width="374" height="548"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVw-Hl-IRe">
-                                        <rect key="frame" x="0.0" y="662.5" width="374" height="68"/>
+                                        <rect key="frame" x="0.0" y="614.5" width="374" height="68"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="True" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ml0-xw-EmG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbn-vQ-GyC">
-                                        <rect key="frame" x="0.0" y="753.5" width="374" height="68"/>
+                                        <rect key="frame" x="0.0" y="705.5" width="374" height="68"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="False" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pg2-XB-lOe"/>
+                                        </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TXm-qh-7Xg">
-                                        <rect key="frame" x="0.0" y="844.5" width="374" height="2.5"/>
+                                        <rect key="frame" x="0.0" y="796.5" width="374" height="2.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.2770131528" green="0.3800790906" blue="0.57570761439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="progressTintColor" red="1" green="0.45854175089999999" blue="0.6605013609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,14 +68,14 @@
                                     </progressView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="tbn-vQ-GyC" firstAttribute="top" secondItem="oVw-Hl-IRe" secondAttribute="bottom" constant="23" id="shp-Nd-N7K"/>
+                                    <constraint firstItem="GWk-0e-YYH" firstAttribute="top" secondItem="EwI-0S-WcV" secondAttribute="top" constant="40" id="U61-dE-F0f"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14509803921568626" green="0.17254901960784313" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="EwI-0S-WcV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2vr-5Y-lJ2"/>
+                            <constraint firstItem="EwI-0S-WcV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2vr-5Y-lJ2"/>
                             <constraint firstItem="eGL-jB-Wwb" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="44E-zk-IeP"/>
                             <constraint firstItem="eGL-jB-Wwb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UcH-BM-8eE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EwI-0S-WcV" secondAttribute="trailing" constant="20" id="VXW-Nk-rq3"/>
@@ -72,6 +84,13 @@
                             <constraint firstItem="eGL-jB-Wwb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="mrg-o2-w0N"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="falseButton" destination="tbn-vQ-GyC" id="lnU-Uj-2I8"/>
+                        <outlet property="progressBar" destination="TXm-qh-7Xg" id="LZq-6g-e4q"/>
+                        <outlet property="questionLabel" destination="rSI-li-mhO" id="kGv-Ae-lfI"/>
+                        <outlet property="scoreLabel" destination="GWk-0e-YYH" id="dLC-U9-sMX"/>
+                        <outlet property="trueButton" destination="oVw-Hl-IRe" id="ZzK-W9-xyY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
